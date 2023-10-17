@@ -13,6 +13,8 @@ import About from './pages/About/About';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import AuthProvider from './Provider/AuthProvider';
+import AddProduct from './pages/AddProduct/AddProduct';
+import Brand from './components/Brand/Brand';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,19 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>
+      },
+      {
+        path: "/addProduct",
+        element: <AddProduct></AddProduct>
+
+      },
+      {
+        path: "/brands",
+        element: <Brand></Brand>
+      },
+      {
+        
+
       },
       {
         path: "/login",

@@ -21,6 +21,29 @@ const Navbar = () => {
         <div className="mr-[20px]"></div>
 
         <NavLink
+            to="/brands"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-[#362FD9] underline font-bold" : ""
+            }
+        >
+            All Brand
+        </NavLink>
+
+        <div className="mr-[20px]"></div>
+
+        <NavLink
+            to="/addProduct"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-[#362FD9] underline font-bold" : ""
+            }
+        >
+            Add Product
+        </NavLink>
+
+        <div className="mr-[20px]"></div>
+
+
+        <NavLink
             to="/about"
             className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "text-[#362FD9] underline font-bold" : ""
@@ -114,7 +137,7 @@ const Navbar = () => {
                                 </div>
 
                                 <div>
-                                    
+
                                     <button
                                         onClick={logOut}
                                         className="btn btn-sm  btn-primary bg-[#F4E869] text-black">Logout</button>
