@@ -15,6 +15,7 @@ import Register from './pages/Register/Register';
 import AuthProvider from './Provider/AuthProvider';
 import AddProduct from './pages/AddProduct/AddProduct';
 import Brand from './components/Brand/Brand';
+import Bdetails from './components/Brand/Bdetails';
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,9 @@ const router = createBrowserRouter([
         element: <Brand></Brand>
       },
       {
-        
+          path: "/brandDetails/:id",
+          element:<Bdetails></Bdetails>,
+          // loader: () => fetch('/brandData.json')
 
       },
       {

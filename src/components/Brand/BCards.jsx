@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 
 const BCards = ({ brand }) => {
     const { id, name } = brand || {};
@@ -12,9 +14,9 @@ const BCards = ({ brand }) => {
                     <h2 className="card-title">id: {id}</h2>
                     <p>name : {name} </p>
 
-                    <div className="card-actions justify-end">
+                    <Link to={`/brandDetails/${id}`}>
                         <button className="btn btn-primary">See Detail</button>
-                    </div>
+                    </Link>
                 </div>
             </div>
 
