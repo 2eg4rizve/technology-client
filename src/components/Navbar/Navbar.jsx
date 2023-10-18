@@ -121,7 +121,10 @@ const Navbar = () => {
                             {navLink}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">The Riz</a>
+                    <img className="w-[25px] h-[25px]" src="https://i.ibb.co/cbpN0pr/logo1.jpg" alt="" />
+                    <a className="btn btn-ghost normal-case text-xl ml-[-1px]">The Riz  </a>
+                   
+
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-[20px]">
