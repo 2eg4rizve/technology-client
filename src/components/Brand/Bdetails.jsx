@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import BdetailsCard from "./BdetailsCard";
 
 const Bdetails = () => {
@@ -49,7 +49,7 @@ const Bdetails = () => {
             .then(data => setAllBrands(data))
     }, [id])
 
-    console.log(allBrands);
+    // console.log(allBrands);
 
 
     const [myBrand, setMyBrand] = useState();
@@ -62,7 +62,7 @@ const Bdetails = () => {
 
     }, [id, allBrands, bName])
 
-    console.log("my-brand", myBrand);
+    // console.log("my-brand", myBrand);
 
 
 

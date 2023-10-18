@@ -16,6 +16,7 @@ import AuthProvider from './Provider/AuthProvider';
 import AddProduct from './pages/AddProduct/AddProduct';
 import Brand from './components/Brand/Brand';
 import Bdetails from './components/Brand/Bdetails';
+import ProductDetails from './components/Brand/ProductDetails';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,11 @@ const router = createBrowserRouter([
           element:<Bdetails></Bdetails>,
           // loader: () => fetch('/brandData.json')
 
+      },
+      {
+        path: "/productDetail/:id",
+        element: <ProductDetails></ProductDetails>,
+        loader: () => fetch("http://localhost:5000/products")
       },
       {
         path: "/login",
