@@ -17,6 +17,7 @@ import AddProduct from './pages/AddProduct/AddProduct';
 import Brand from './components/Brand/Brand';
 import Bdetails from './components/Brand/Bdetails';
 import ProductDetails from './components/Brand/ProductDetails';
+import ProductUpdate from './components/Brand/ProductUpdate';
 
 const router = createBrowserRouter([
   {
@@ -42,15 +43,21 @@ const router = createBrowserRouter([
         element: <Brand></Brand>
       },
       {
-          path: "/brandDetails/:id",
-          element:<Bdetails></Bdetails>,
-          // loader: () => fetch('/brandData.json')
+        path: "/brandDetails/:id",
+        element: <Bdetails></Bdetails>,
+        // loader: () => fetch('/brandData.json')
 
       },
       {
         path: "/productDetail/:id",
         element: <ProductDetails></ProductDetails>,
         loader: () => fetch("http://localhost:5000/products")
+      },
+      {
+        path: "productUpdate/:id",
+        element: <ProductUpdate></ProductUpdate>,
+        loader: () => fetch("http://localhost:5000/products")
+
       },
       {
         path: "/login",
@@ -72,3 +79,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
   </React.StrictMode>,
 )
+
+//    loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)

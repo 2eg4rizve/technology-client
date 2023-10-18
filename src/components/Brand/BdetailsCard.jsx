@@ -26,10 +26,14 @@ const BdetailsCard = ({ product }) => {
                         <button className="btn btn-primary w-full">Details</button>
                     </Link>
 
+                    <Link to={`/productUpdate/${_id}`}>
+                        <button className="btn btn-primary w-full">Update</button>
+                    </Link>
 
 
 
-                    <button className="btn btn-primary">Update</button>
+
+
 
 
 

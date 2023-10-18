@@ -17,6 +17,8 @@ const BCards = ({ brand }) => {
                     <Link to={`/brandDetails/${id}`}>
                         <button className="btn btn-primary">See Detail</button>
                     </Link>
+
+                    
                 </div>
             </div>
 
