@@ -7,14 +7,14 @@ import Swal from "sweetalert2";
 const ProductUpdate = () => {
 
     const { id } = useParams();
-    console.log("ProductUpdate id : ", id);
+    // console.log("ProductUpdate id : ", id);
 
     const allBrands = useLoaderData();
 
     const [nowProduct, setNowProduct] = useState([]);
 
     useEffect(() => {
-        const rec = allBrands.filter(item => item._id == id)
+        const rec = allBrands?.filter(item => item._id == id)
         setNowProduct(rec)
     }, [allBrands, id])
 
