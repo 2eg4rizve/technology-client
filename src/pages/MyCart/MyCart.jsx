@@ -25,7 +25,7 @@ const MyCart = () => {
 
   
     // console.log("myCarts item : ",myCarts);
-
+    // const [newMyCarts,setNewMyCarts] = useState(myCarts)
 
 
 
@@ -34,7 +34,7 @@ const MyCart = () => {
             <p className="text-5xl font-bold text-center my-[20px] pt-[20px]">My Carts</p>
 
             {
-                 myCarts.map(myCart => <MyCartsCard key={myCart._id} myCart={myCart}> </MyCartsCard>)
+                myCarts.map(myCart => <MyCartsCard key={myCart._id}  myCart={myCart} myCarts={myCarts} setMyCarts={setMyCarts} > </MyCartsCard>)
 
             }
 
