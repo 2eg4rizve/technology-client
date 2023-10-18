@@ -153,7 +153,7 @@ const AddProduct = () => {
                             <span className="label-text">Rating </span>
                         </label>
                         <label className="input-group">
-                            <input type="number" name='rating' placeholder="Rating" className="input input-bordered w-full" />
+                            <input type="text" name='rating' placeholder="Rating" className="input input-bordered w-full" />
                         </label>
                     </div>
 

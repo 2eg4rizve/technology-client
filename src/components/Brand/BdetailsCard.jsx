@@ -14,13 +14,13 @@ const BdetailsCard = ({ product }) => {
         <div>
 
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure><img src={photo} alt="Shoes" /></figure>
-                <div className="card-body">
+                <figure><img className="h-[200px] w-full" src={photo} alt="Shoes" /></figure>
+                <div className="card-body h-[380px] mt-[20px] ">
                     <h2 className="card-title">Product Name : {productName}</h2>
                     <h2 className="card-title">Brand : {bandName}</h2>
                     <h2 className="card-title">Type : {type}</h2>
                     <h2 className="card-title">Price : {price} $</h2>
-                    <h2 className="card-title">Rating : {rating} </h2>
+                    <h2 className="card-title pb-[20px]">Rating : {rating} / 5</h2>
 
                     <Link to={`/productDetail/${_id}`}>
                         <button className="btn btn-primary w-full">Details</button>
