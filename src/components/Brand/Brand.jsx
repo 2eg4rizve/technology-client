@@ -20,7 +20,7 @@ const Brand = () => {
 
             <p className="text-5xl font-bold text-center my-[40px] pt-[40px]">BRAND</p>
 
-            <div className="grid  grid-cols-1 lg:grid-cols-3 gap-7 ">
+            <div className="grid  grid-cols-1 lg:grid-cols-3 gap-10 ">
 
                 {
                     brands.map(brand => <BCards key={brand.id} brand={brand}></BCards>)

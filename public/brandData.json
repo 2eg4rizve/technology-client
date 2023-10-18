@@ -1,30 +1,36 @@
 [
   {
     "id": 1,
-    "name": "Apple"
+    "name": "Apple",
+    "imagelogo" : "https://i.ibb.co/9nbTXDq/photo-1621768216002-5ac171876625-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
   },
   {
     "id": 2,
-    "name": "Hp"
+    "name": "Hp",
+    "imagelogo":"https://i.ibb.co/bL1bsKT/2048px-HP-logo-2012-svg.png"
   },
   {
     "id": 3,
-    "name": "Samsung"
+    "name": "Samsung",
+    "imagelogo":"https://i.ibb.co/hM885Nv/photo-1662947995689-ec5165848ad0-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
 
   },
   {
     "id": 4,
-    "name": "Sony"
+    "name": "Sony",
+    "imagelogo":"https://i.ibb.co/gtqXtBd/images-q-tbn-ANd9-Gc-Rnsr-GGil0-VEGLGj-V5z7tt-U6-Fr-Nr-H5b-E75yjg-usqp-CAU.png"
 
   },
   {
     "id": 5,
-    "name": "Google"
+    "name": "Google",
+    "imagelogo":"https://i.ibb.co/f1wkF4M/photo-1572059002053-8cc5ad2f4a38-auto-format-fit-max-q-80-blend-000000-blend-alpha-10-blend-mode-nor.jpg"
 
   },
   {
     "id": 6,
-    "name": "Intel"
+    "name": "Intel",
+    "imagelogo":"https://i.ibb.co/m6mngLj/Intel-Logo.png"
 
   }
 ]
