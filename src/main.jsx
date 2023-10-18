@@ -22,6 +22,7 @@ import MyCart from './pages/MyCart/MyCart';
 import Speciality from './pages/Speciality/Speciality';
 import Blog from './pages/Blog/Blog';
 import ContactUs from './pages/ContactUs/ContactUs';
+import PivateRoute from './components/PivateRoute/PivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/blog",
-        element: <Blog></Blog>
+        element:  <PivateRoute><Blog></Blog></PivateRoute> 
 
       },
       {
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/addProduct",
-        element: <AddProduct></AddProduct>
+        element: <PivateRoute> <AddProduct></AddProduct></PivateRoute>
 
       },
       {
@@ -63,24 +64,24 @@ const router = createBrowserRouter([
       },
       {
         path: "/brandDetails/:id",
-        element: <Bdetails></Bdetails>,
+        element:  <Bdetails></Bdetails>,
         // loader: () => fetch('/brandData.json')
 
       },
       {
         path: "/productDetail/:id",
-        element: <ProductDetails></ProductDetails>,
+        element: <PivateRoute><ProductDetails></ProductDetails></PivateRoute> ,
         loader: () => fetch("http://localhost:5000/products")
       },
       {
         path: "productUpdate/:id",
-        element: <ProductUpdate></ProductUpdate>,
+        element: <PivateRoute><ProductUpdate></ProductUpdate></PivateRoute> ,
         loader: () => fetch("http://localhost:5000/products")
 
       },
       {
         path:"/myCarts",
-        element: <MyCart></MyCart>,
+        element: <PivateRoute><MyCart></MyCart></PivateRoute> ,
         loader: () => fetch("http://localhost:5000/carts")
 
       },
