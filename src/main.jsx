@@ -19,6 +19,9 @@ import Bdetails from './components/Brand/Bdetails';
 import ProductDetails from './components/Brand/ProductDetails';
 import ProductUpdate from './components/Brand/ProductUpdate';
 import MyCart from './pages/MyCart/MyCart';
+import Speciality from './pages/Speciality/Speciality';
+import Blog from './pages/Blog/Blog';
+import ContactUs from './pages/ContactUs/ContactUs';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +36,21 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>
+      },
+      {
+        path: "/speciality",
+        element: <Speciality></Speciality>
+
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
+
+      },
+      {
+        path: "/contactUs",
+        element: <ContactUs></ContactUs>
+
       },
       {
         path: "/addProduct",

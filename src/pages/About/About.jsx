@@ -17,10 +17,10 @@ const About = () => {
 
             <ScrollRestoration />
 
-            <p className="text-5xl font-bold text-center my-[40px] pt-[40px]">ABOUT</p>
+            <p className="text-5xl font-bold text-center mt-[40px] pt-[40px]">ABOUT</p>
 
 
-            <p className="pt-[60px] pb-[60px] ">
+            <p className="pt-[60px] pb-[40px]">
 
                 Welcome to R electronics, our hub for all things tech and electronics! Our passion for innovation drives us to keep you updated with the latest in the tech world. We offer in-depth reviews, news, and how-to guides to help you navigate the ever-changing landscape of gadgets and devices. Our goal is to empower you with knowledge, so you can make confident choices in the fast-paced world of technology. Join our community of tech enthusiasts and stay ahead of the curve.
 

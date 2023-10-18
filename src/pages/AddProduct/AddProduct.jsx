@@ -15,8 +15,8 @@ const AddProduct = () => {
 
         const form = event.target;
 
-        const UserName = form.UserName.value;
-        const userEmail = form.userEmail.value;
+        const UserName = form?.UserName?.value;
+        const userEmail = form?.userEmail?.value;
         const photo = form.photo.value;
         const productName = form.productName.value;
         const bandName = form.bandName.value;
