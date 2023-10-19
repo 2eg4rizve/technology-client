@@ -18,7 +18,7 @@ const ContactUs = () => {
     }, [])
 
     return (
-        <div className="my-[50px] bg-[#F8FF95] p-[20px]" style={{ background: isDarkMode ? "black" : "#F8FF95" , color: isDarkMode ? "white" : "black" }} data-aos = "fade-up">
+        <div className="my-[50px] bg-[#99DBF5] p-[20px]" style={{ background: isDarkMode ? "black" : "#99DBF5" , color: isDarkMode ? "white" : "black" }} data-aos = "fade-up">
             <ScrollRestoration />
             <h1 className="font-bold text-center text-5xl">Contact Us</h1>
             <div className="flex flex-col lg:flex-row pb-[50px]">

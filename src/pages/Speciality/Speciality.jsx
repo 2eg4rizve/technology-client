@@ -15,7 +15,7 @@ const Speciality = () => {
 
     }, [])
     return (
-        <div style={{ background: isDarkMode ? "black" : "white" , color: isDarkMode ? "white" : "black" } } className="pb-[10px]" data-aos="fade-up" >
+        <div style={{ background: isDarkMode ? "black" : "#99DBF5" , color: isDarkMode ? "white" : "black" } } className="pb-[10px]" data-aos="fade-up" >
             <ScrollRestoration />
            
 

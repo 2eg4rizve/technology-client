@@ -17,7 +17,7 @@ const About = () => {
 
     }, [])
     return (
-        <div className="mt-[50px] p-[20px] text-center" data-aos="fade-up" style={{ background: isDarkMode ? "black" : "white" , color: isDarkMode ? "white" : "black" }}>
+        <div className="mt-[50px] px-[20px] text-center" data-aos="fade-up" style={{ background: isDarkMode ? "black" : "#99DBF5" , color: isDarkMode ? "white" : "black" }}>
 
             <ScrollRestoration />
 

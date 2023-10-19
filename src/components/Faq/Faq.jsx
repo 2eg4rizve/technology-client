@@ -19,7 +19,7 @@ const Faq = () => {
 
     return (
 
-        <div className="my-[50px] bg-[#F8FF95]"  data-aos = "fade-up" style={{ background: isDarkMode ? "#282A3A" : "#F8FF95" , color: isDarkMode ? "white" : "black" }}>
+        <div className="my-[50px] pb-[50px] px-[10px] bg-[#99DBF5]"  data-aos = "fade-up" style={{ background: isDarkMode ? "#282A3A" : "#99DBF5" , color: isDarkMode ? "white" : "black" }}>
 
             <h1 className="text-5xl font-bold text-center pt-[20px]">Frequently Asked Questions </h1>
 

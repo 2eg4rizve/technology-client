@@ -36,7 +36,7 @@ const Footer = () => {
                         </label>
                         <div className="relative">
                             <input type="text"  placeholder="Enter Email" className="input input-bordered w-full pr-16 text-black" />
-                            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none bg-[#F4E869] text-black">Subscribe</button>
+                            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none bg-[#78C1F3] text-black">Subscribe</button>
                         </div>
                     </fieldset>
                     <div className="grid grid-flow-col gap-4 mt-5">

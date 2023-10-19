@@ -168,7 +168,7 @@ const Navbar = () => {
 
                                     <button
                                         onClick={logOut}
-                                        className="btn btn-sm  btn-primary bg-[#F4E869] text-black">Logout
+                                        className="btn btn-sm  btn-primary bg-[#78C1F3] text-black">Logout
                                     </button>
 
 
@@ -179,7 +179,7 @@ const Navbar = () => {
                                 </div>
 
                             </div>
-                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  bg-[#F4E869] pb-[100px] z-20">
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  bg-[#78C1F3] pb-[100px] z-20">
                                 <li>
                                     <button className="btn btn-sm  btn-ghost">{user.displayName}</button>
                                     <button className="btn btn-sm  btn-ghost">{user.email}</button>
@@ -188,7 +188,7 @@ const Navbar = () => {
                                 <li>
                                     <button
                                         onClick={logOut}
-                                        className="btn btn-sm btn-primary bg-[#F4E869] text-black">Logout</button>
+                                        className="btn btn-sm btn-primary bg-[#78C1F3] text-black">Logout</button>
                                 </li>
 
 
@@ -198,11 +198,11 @@ const Navbar = () => {
                             :
                             <div>
                                 <Link to='/login'>
-                                    <button className="btn btn-sm  btn-primary bg-[#F4E869] text-black">Login</button>
+                                    <button className="btn btn-sm  btn-primary bg-[#78C1F3] text-black">Login</button>
                                 </Link>
                                 /
                                 <Link to='/register'>
-                                    <button className="btn btn-sm text-black btn-primary bg-[#F4E869]">Register</button>
+                                    <button className="btn btn-sm text-black btn-primary bg-[#78C1F3]">Register</button>
                                 </Link>
 
 

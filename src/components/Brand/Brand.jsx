@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import BCards from "./BCards";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { ScrollRestoration } from "react-router-dom";
 
 const Brand = () => {
 
@@ -18,9 +19,10 @@ const Brand = () => {
 
 
     return (
-        <div style={{ background: isDarkMode ? "#6B728E" : "white" , color: isDarkMode ? "white" : "black" } }>
+        <div className="pb-[50px]" style={{ background: isDarkMode ? "#6B728E" : "white" , color: isDarkMode ? "white" : "black" } }>
+            <ScrollRestoration />
 
-            <p className="text-5xl font-bold text-center my-[40px] pt-[40px]">BRAND</p>
+            <p className="text-5xl font-bold text-center my-[40px] py-[40px]">BRAND</p>
 
             <div className="grid  grid-cols-1 lg:grid-cols-3 gap-10 ">
 

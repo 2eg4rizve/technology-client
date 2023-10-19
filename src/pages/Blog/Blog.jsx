@@ -4,7 +4,7 @@ import { ScrollRestoration } from "react-router-dom";
 
 const Blog = () => {
     return (
-        <div>
+        <div className="bg-[#B6FFFA] pb-[40px]">
               <ScrollRestoration />
             <p className="text-5xl font-bold text-center my-[40px] pt-[40px]">Blog</p>
             <div>
@@ -80,13 +80,13 @@ const Blog = () => {
 
 
                 <div className="mt-[100px] space-y-3">
-                    <input type="text" placeholder="Enter Your Name" className="input input-bordered w-full max-w-xs border-[#F4E869] border-2" />
+                    <input type="text" placeholder="Enter Your Name" className="input input-bordered w-full max-w-xs border-[#78C1F3] border-2" />
                     <br />
-                    <input type="text" placeholder="Enter Your Email" className="input input-bordered w-full max-w-xs border-[#F4E869] border-2" />
+                    <input type="text" placeholder="Enter Your Email" className="input input-bordered w-full max-w-xs border-[#78C1F3] border-2" />
 
-                    <textarea className="textarea border-[#F4E869] border-2 w-full min-h-[200px]" placeholder="Type Your Comment"></textarea>
+                    <textarea className="textarea border-[#78C1F3] border-2 w-full min-h-[200px]" placeholder="Type Your Comment"></textarea>
 
-                    <button className="btn btn-primary text-black w-full bg-[#F4E869]">Submit</button>
+                    <button className="btn btn-primary text-black w-full bg-[#78C1F3]">Submit</button>
 
                 </div>
 

@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { ScrollRestoration, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import MyCartsCard from "./MyCartsCard";
 
 
 const MyCart = () => {
+    
 
     const carts = useLoaderData();
     // console.log("all carts : ",carts);
@@ -31,6 +32,7 @@ const MyCart = () => {
 
     return (
         <div>
+            <ScrollRestoration />
             <p className="text-5xl font-bold text-center my-[20px] pt-[20px]">My Carts</p>
 
             {
