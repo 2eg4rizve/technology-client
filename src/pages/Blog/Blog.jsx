@@ -6,7 +6,7 @@ const Blog = () => {
     return (
         <div>
               <ScrollRestoration />
-            <p className="text-5xl font-bold text-center my-[40px] pt-[40px]">ABOUT</p>
+            <p className="text-5xl font-bold text-center my-[40px] pt-[40px]">Blog</p>
             <div>
                 <div className="mt-[50px]  p-[30px]">
 

@@ -62,7 +62,7 @@ const ProductDetails = () => {
                     Swal.fire({
                         icon: 'success',
                         title: 'Wow...',
-                        text: 'My Product add successfully',
+                        text: 'Product Add In Cart Successfully',
 
                     })
                 }

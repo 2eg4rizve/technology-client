@@ -67,7 +67,7 @@ const Bdetails = () => {
         img2 = "https://i.ibb.co/RpvNHbb/y-Yq-JKJ0-GO64.jpg"
         img3 = "https://i.ibb.co/k3Sz0G6/photo-1602837385569-08ac19ec83af-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
 
-       
+
 
     }
 
@@ -98,53 +98,73 @@ const Bdetails = () => {
 
     // console.log("my-brand", myBrand);
 
-    return (
-        <div>
-
+    if (myBrand?.length === 0) {
+        return <div>
             <p className="text-center text-5xl font-bold my-[50px]">{bName} </p>
 
-            <Swiper
-                style={{
-                    "--swiper-pagination-color": "red",
-                    "--swiper-navigation-color": "green",
-                }}
-                spaceBetween={30}
-                slidesPerView={1}
-                loop={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
-
-            >
-
-                <SwiperSlide><img className='h-[600px] w-full' src={img1} alt="" /></SwiperSlide>
-                <SwiperSlide><img className='h-[600px] w-full' src={img2} alt="" /></SwiperSlide>
-                <SwiperSlide><img className='h-[600px] w-full' src={img3} alt="" /></SwiperSlide>
+            <p className="text-center text-4xl font-bold my-[50px]">No Product Found </p>
 
 
+            <p className="text-center text-4xl font-bold my-[50px]">Sorry , There Are No Product </p>
 
-
-
-
-            </Swiper>
-            {/* <p className="text-center text-5xl font-bold my-[50px]">{findBrands?.length}</p> */}
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-[100px]">
-                {
-                    myBrand?.map(product => <BdetailsCard key={product._id} product={product}> </BdetailsCard>)
-                }
-
-            </div>
+           
+           
 
         </div>
-    );
+    }
+    else {
+        return (
+            <div>
+
+                <p className="text-center text-5xl font-bold my-[50px]">{bName} </p>
+
+
+
+
+                <Swiper
+                    style={{
+                        "--swiper-pagination-color": "red",
+                        "--swiper-navigation-color": "green",
+                    }}
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    loop={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Autoplay, Pagination, Navigation]}
+                    className="mySwiper"
+
+                >
+
+                    <SwiperSlide><img className='h-[600px] w-full' src={img1} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-[600px] w-full' src={img2} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-[600px] w-full' src={img3} alt="" /></SwiperSlide>
+
+
+
+
+
+
+                </Swiper>
+                {/* <p className="text-center text-5xl font-bold my-[50px]">{findBrands?.length}</p> */}
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-[100px]">
+                    {
+                        myBrand?.map(product => <BdetailsCard key={product._id} product={product}> </BdetailsCard>)
+                    }
+
+                </div>
+
+            </div>
+        );
+
+    }
 };
 
 export default Bdetails;
