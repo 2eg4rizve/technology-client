@@ -74,14 +74,14 @@ const ProductDetails = () => {
 
     return (
         <div>
-            <p>{id}</p>
+            {/* <p>{id}</p> */}
             <img className="w-full h-[300px]" src={nowProduct[0]?.photo} alt="" />
-            <p>Product Name : {nowProduct[0]?.productName}</p>
-            <p>Band Name : {nowProduct[0]?.bandName}</p>
-            <p>Type : {nowProduct[0]?.type}</p>
-            <p>Price : {nowProduct[0]?.price} $</p>
-            <p>Description : {nowProduct[0]?.shortDescription}</p>
-            <p>Rating : {nowProduct[0]?.rating} </p>
+            <p className="mt-[50px] font-bold text-[20px] ml-[15px]" >Product Name : {nowProduct[0]?.productName}</p>
+            <p className="mt-[10px] font-bold text-[20px] ml-[15px]">Band Name : {nowProduct[0]?.bandName}</p>
+            <p className="mt-[10px] font-bold text-[20px] ml-[15px]">Type : {nowProduct[0]?.type}</p>
+            <p className="mt-[10px] font-bold text-[20px] ml-[15px]">Price : {nowProduct[0]?.price} $</p>
+            <p className="mt-[10px] font-bold text-[20px] ml-[15px]">Description : {nowProduct[0]?.shortDescription}</p>
+            <p className="mt-[10px] font-bold text-[20px] ml-[15px]">Rating : {nowProduct[0]?.rating} </p>
 
 
 
