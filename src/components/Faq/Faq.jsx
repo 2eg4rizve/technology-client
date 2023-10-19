@@ -3,10 +3,12 @@
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 
 const Faq = () => {
+    const { isDarkMode } = useContext(AuthContext);
 
     useEffect(() => {
 
@@ -17,13 +19,13 @@ const Faq = () => {
 
     return (
 
-        <div className="my-[50px] bg-[#F8FF95]" data-aos = "fade-up">
+        <div className="my-[50px] bg-[#F8FF95]"  data-aos = "fade-up" style={{ background: isDarkMode ? "#282A3A" : "white" , color: isDarkMode ? "white" : "black" }}>
 
             <h1 className="text-5xl font-bold text-center pt-[20px]">Frequently Asked Questions </h1>
 
-            <div className="space-y-3 mt-[40px]">
+            <div className="space-y-3 mt-[40px]" >
 
-                <div className="collapse collapse-arrow bg-base-200">
+                <div className="collapse collapse-arrow bg-base-200" style={{ background: isDarkMode ? "black" : "white" , color: isDarkMode ? "white" : "black" }}>
                     <input type="radio" name="my-accordion-2" checked="checked" />
                     <div className="collapse-title text-xl font-medium">
                     What is the latest product released by Apple?
@@ -34,7 +36,7 @@ const Faq = () => {
                 </div>
 
 
-                <div className="collapse collapse-arrow bg-base-200">
+                <div className="collapse collapse-arrow bg-base-200" style={{ background: isDarkMode ? "black" : "white" , color: isDarkMode ? "white" : "black" }}>
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                     What are the key features of the latest Samsung Galaxy smartphone?
@@ -45,7 +47,7 @@ const Faq = () => {
                 </div>
 
 
-                <div className="collapse collapse-arrow bg-base-200">
+                <div className="collapse collapse-arrow bg-base-200" style={{ background: isDarkMode ? "black" : "white" , color: isDarkMode ? "white" : "black" }}>
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                     How does Sony's PlayStation 5 compare to the Xbox Series X in terms of performance?
@@ -56,7 +58,7 @@ const Faq = () => {
                 </div>
 
 
-                <div className="collapse collapse-arrow bg-base-200">
+                <div className="collapse collapse-arrow bg-base-200" style={{ background: isDarkMode ? "black" : "white" , color: isDarkMode ? "white" : "black" }}>
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                     What's the latest innovation from Google in the tech industry?
@@ -68,7 +70,7 @@ const Faq = () => {
 
 
 
-                <div className="collapse collapse-arrow bg-base-200">
+                <div className="collapse collapse-arrow bg-base-200" style={{ background: isDarkMode ? "black" : "white" , color: isDarkMode ? "white" : "black" }}>
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                     How can I protect my electronic devices from malware and viruses?
@@ -79,13 +81,13 @@ const Faq = () => {
                 </div>
 
 
-                <div className="collapse collapse-arrow bg-base-200">
+                <div className="collapse collapse-arrow bg-base-200" style={{ background: isDarkMode ? "black" : "white" , color: isDarkMode ? "white" : "black" }}>
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                     What are the essential factors to consider when purchasing a new smartphone or laptop?
                     </div>
                     <div className="collapse-content">
-                        <p>What are the essential factors to consider when purchasing a new smartphone or laptop?</p>
+                        <p> To stay updated, you can visit our official blog or follow tech news outlets for announcements on their latest projects and products.</p>
                     </div>
                 </div>
 

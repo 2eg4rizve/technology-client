@@ -1,10 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+
 
 
 
 const Navbar = () => {
 
+   
+    const { isDarkMode } = useContext(AuthContext);
     const { user, logOut } = useAuth();
 
     const navLink = <>
@@ -49,7 +54,7 @@ const Navbar = () => {
                 isPending ? "pending" : isActive ? "text-[#362FD9] underline font-bold" : ""
             }
         >
-           My Cart
+            My Cart
         </NavLink>
 
         <div className="mr-[20px]"></div>
@@ -109,9 +114,9 @@ const Navbar = () => {
 
 
     return (
-        <div className="mb-[50px] sticky top-0 z-50">
+        <div className="mb-[10px] sticky top-0 z-50 " style={{ background: isDarkMode ? "#45474B" : "white" }}>
 
-            <div className="navbar bg-base-100 ">
+            <div className="navbar bg-base-100 " style={{ background: isDarkMode ? "#45474B" : "white" , color: isDarkMode ? "white" : "black" }}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -123,7 +128,7 @@ const Navbar = () => {
                     </div>
                     <img className="w-[25px] h-[25px]" src="https://i.ibb.co/cbpN0pr/logo1.jpg" alt="" />
                     <a className="btn btn-ghost normal-case text-xl ml-[-1px]">The Riz  </a>
-                   
+
 
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -155,7 +160,11 @@ const Navbar = () => {
 
                                     <button
                                         onClick={logOut}
-                                        className="btn btn-sm  btn-primary bg-[#F4E869] text-black">Logout</button>
+                                        className="btn btn-sm  btn-primary bg-[#F4E869] text-black">Logout
+                                    </button>
+
+                                   
+                                    
 
                                 </div>
                             </div>
@@ -169,8 +178,9 @@ const Navbar = () => {
                                     <button
                                         onClick={logOut}
                                         className="btn btn-sm btn-primary bg-[#F4E869] text-black">Logout</button>
-
                                 </li>
+
+
                             </ul>
                         </div>
                             :
@@ -183,12 +193,18 @@ const Navbar = () => {
                                     <button className="btn btn-sm text-black btn-primary bg-[#F4E869]">Register</button>
                                 </Link>
 
+
                             </div>
 
 
 
 
+
+
                     }
+
+
+
                 </div>
 
 

@@ -1,10 +1,13 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { ScrollRestoration } from "react-router-dom";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Speciality = () => {
+
+    const { isDarkMode } = useContext(AuthContext);
 
     useEffect(() => {
 
@@ -12,7 +15,7 @@ const Speciality = () => {
 
     }, [])
     return (
-        <div  data-aos="fade-up">
+        <div style={{ background: isDarkMode ? "black" : "white" , color: isDarkMode ? "white" : "black" } } className="pb-[10px]" data-aos="fade-up" >
             <ScrollRestoration />
            
 

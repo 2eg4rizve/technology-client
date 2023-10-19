@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useContext } from "react";
 
 
 const Footer = () => {
+    const { isDarkMode } = useContext(AuthContext);
     return (
-        <div className="mt-[50px] ">
+        <div className="mt-[50px] " style={{ background: isDarkMode ? "#001C30" : "white" , color: isDarkMode ? "white" : "black" }}>
             <footer className="footer p-10 bg-neutral text-neutral-content">
                 <nav>
                     <header className="footer-title">Services</header>

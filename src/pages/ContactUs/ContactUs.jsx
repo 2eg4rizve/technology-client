@@ -2,11 +2,14 @@ import { Link } from "react-router-dom";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 import { ScrollRestoration } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const ContactUs = () => {
+
+    const { isDarkMode } = useContext(AuthContext);
 
     useEffect(() => {
 
@@ -15,7 +18,7 @@ const ContactUs = () => {
     }, [])
 
     return (
-        <div className="my-[50px] bg-[#F8FF95] p-[20px]" data-aos = "fade-up">
+        <div className="my-[50px] bg-[#F8FF95] p-[20px]" style={{ background: isDarkMode ? "black" : "#F8FF95" , color: isDarkMode ? "white" : "black" }} data-aos = "fade-up">
             <ScrollRestoration />
             <h1 className="font-bold text-center text-5xl">Contact Us</h1>
             <div className="flex flex-col lg:flex-row pb-[50px]">
@@ -57,7 +60,7 @@ const ContactUs = () => {
                     </div>
 
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 text-black">
 
                     <div className="mt-[100px] space-y-3">
                         <input type="text" placeholder="Enter Your Name" className="input input-bordered w-full max-w-xs  border-2" />

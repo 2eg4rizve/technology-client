@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import BCards from "./BCards";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Brand = () => {
 
+    const { isDarkMode } = useContext(AuthContext);
 
     const [brands, setBrands] = useState([]);
 
@@ -16,7 +18,7 @@ const Brand = () => {
 
 
     return (
-        <div>
+        <div style={{ background: isDarkMode ? "#6B728E" : "white" , color: isDarkMode ? "white" : "black" } }>
 
             <p className="text-5xl font-bold text-center my-[40px] pt-[40px]">BRAND</p>
 
