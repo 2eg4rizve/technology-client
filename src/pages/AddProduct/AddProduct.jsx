@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -7,6 +7,12 @@ const AddProduct = () => {
 
 
     const { user } = useContext(AuthContext);
+
+    const [selectedItem, setSelectedItem] = useState('');
+
+    const handleSelectChange = (event) => {
+        setSelectedItem(event.target.value);
+    }
 
     // console.log(user)
 
@@ -19,7 +25,7 @@ const AddProduct = () => {
         const userEmail = form?.userEmail?.value;
         const photo = form.photo.value;
         const productName = form.productName.value;
-        const bandName = form.bandName.value;
+        const bandName = selectedItem;
         const type = form.type.value;
         const price = form.price.value;
         const shortDescription = form.shortDescription.value;
@@ -32,25 +38,25 @@ const AddProduct = () => {
 
 
 
-        fetch('http://localhost:5000/products',{
+        fetch('http://localhost:5000/products', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json' 
+                'content-type': 'application/json'
             },
             body: JSON.stringify(newProduct)
         })
-        .then(res=>res.json())
-        .then(data=>{
-            console.log("add coffee : ",data)
-            if(data.insertedId){
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Wow...',
-                    text: 'Product add successfully',
-                   
-                  })
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log("add coffee : ", data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Wow...',
+                        text: 'Product add successfully',
+
+                    })
+                }
+            })
     }
     return (
         <div>
@@ -84,13 +90,13 @@ const AddProduct = () => {
 
 
 
-                     {/* Photo */}
+                    {/* Photo */}
                     <div className="form-control w-full mb-4">
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered w-full" required/>
+                            <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered w-full" required />
                         </label>
                     </div>
 
@@ -105,14 +111,39 @@ const AddProduct = () => {
                     </div>
 
                     {/* Band Name */}
+
                     <div className="form-control w-full mb-4">
+                        <label className="label">
+                            <span className="label-text">Brand Name</span>
+                        </label>
+                        <div>
+                            <select
+                                onChange={handleSelectChange}
+                                value={selectedItem}
+                                required
+                                className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            >
+                                <option value="">Select a Brand</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Hp">Hp</option>
+                                <option value="Samsung">Samsung</option>
+                                <option value="Sony">Sony</option>
+                                <option value="Google">Google</option>
+                                <option value="Intel">Intel</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    {/* <div className="form-control w-full mb-4">
                         <label className="label">
                             <span className="label-text">Band Name</span>
                         </label>
                         <label className="input-group">
                             <input type="text" name='bandName' placeholder="Band Name" className="input input-bordered w-full" required />
                         </label>
-                    </div>
+                    </div> */}
 
 
                     {/* Type */}
@@ -153,7 +184,7 @@ const AddProduct = () => {
                             <span className="label-text">Rating </span>
                         </label>
                         <label className="input-group">
-                            <input  type="number" step="0.1"  min="0"  max="5" name='rating' placeholder="Rating" className="input input-bordered w-full" required/>
+                            <input type="number" step="0.1" min="0" max="5" name='rating' placeholder="Rating" className="input input-bordered w-full" required />
                         </label>
                     </div>
 

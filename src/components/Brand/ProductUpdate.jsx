@@ -25,6 +25,12 @@ const ProductUpdate = () => {
 
     // console.log(nowProduct[0]?.productName);
 
+    const [selectedItem, setSelectedItem] = useState('');
+
+    const handleSelectChange = (event) => {
+        setSelectedItem(event.target.value);
+    }
+
 
 
     const handleUpdate = event => {
@@ -36,7 +42,7 @@ const ProductUpdate = () => {
         const userEmail = form?.userEmail?.value;
         const photo = form.photo.value;
         const productName = form.productName.value;
-        const bandName = form.bandName.value;
+        const bandName = selectedItem;
         const type = form.type.value;
         const price = form.price.value;
         const shortDescription = form.shortDescription.value;
@@ -129,11 +135,26 @@ const ProductUpdate = () => {
                     {/* Band Name */}
                     <div className="form-control w-full mb-4">
                         <label className="label">
-                            <span className="label-text">Band Name</span>
+                            <span className="label-text">Brand Name</span>
                         </label>
-                        <label className="input-group">
-                            <input type="text" name='bandName' defaultValue={nowProduct[0]?.bandName} placeholder="Band Name" className="input input-bordered w-full" />
-                        </label>
+                        <div>
+                            <select
+                                onChange={handleSelectChange}
+                                value={selectedItem}
+                                required
+                                className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            >
+                                <option value="">Select a Brand</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Hp">Hp</option>
+                                <option value="Samsung">Samsung</option>
+                                <option value="Sony">Sony</option>
+                                <option value="Google">Google</option>
+                                <option value="Intel">Intel</option>
+                            </select>
+
+                        </div>
+
                     </div>
 
 
