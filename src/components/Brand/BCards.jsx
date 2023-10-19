@@ -13,7 +13,7 @@ const BCards = ({ brand }) => {
     return (
         <div>
 
-            <div className="card card-compact bg-base-100 shadow-xl">
+            <div className="card card-compact bg-base-100 shadow-xl mt-[30px]">
                 <figure><img className="h-[200px] w-full" src={imagelogo} alt="Shoes" /></figure>
                 <div className="card-body" style={{ background: isDarkMode ? "#B2B2B2" : "white" , color: isDarkMode ? "white" : "black" }}>
                     {/* <h2 className="card-title">id: {id}</h2> */}
@@ -21,7 +21,7 @@ const BCards = ({ brand }) => {
                     <p className="text-[25px] font-bold mt-[25px] mb-[25px] text-center">Brand : {name} </p>
 
                     <Link to={`/brandDetails/${id}`}>
-                        <button className="btn btn-primary mt-[15px] w-full">See Detail</button>
+                        <button className="btn btn-primary mt-[15px] mb-[20px] w-full">See Detail</button>
                     </Link>
 
                     

@@ -1,10 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import { ScrollRestoration } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useContext } from "react";
 
 
 const Blog = () => {
+    const { isDarkMode } = useContext(AuthContext);
     return (
-        <div className="bg-[#B6FFFA] pb-[40px]">
+        <div className="bg-[#B6FFFA] pb-[40px] px-[20px]" style={{ background: isDarkMode ? "#141E46" : "#99DBF5" , color: isDarkMode ? "white" : "black" }}>
               <ScrollRestoration />
             <p className="text-5xl font-bold text-center my-[40px] pt-[40px]">Blog</p>
             <div>
