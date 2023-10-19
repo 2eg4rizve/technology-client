@@ -8,8 +8,16 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
 
-   
-    const { isDarkMode } = useContext(AuthContext);
+
+    const { isDarkMode, setIsDarkMode } = useContext(AuthContext);
+
+    const toggleTheme = () => {
+        setIsDarkMode(!isDarkMode);
+        // You can save the theme preference to local storage if needed.
+    };
+
+
+
     const { user, logOut } = useAuth();
 
     const navLink = <>
@@ -116,7 +124,7 @@ const Navbar = () => {
     return (
         <div className="mb-[10px] sticky top-0 z-50 " style={{ background: isDarkMode ? "#45474B" : "white" }}>
 
-            <div className="navbar bg-base-100 " style={{ background: isDarkMode ? "#45474B" : "white" , color: isDarkMode ? "white" : "black" }}>
+            <div className="navbar bg-base-100 " style={{ background: isDarkMode ? "#45474B" : "white", color: isDarkMode ? "white" : "black" }}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -163,10 +171,13 @@ const Navbar = () => {
                                         className="btn btn-sm  btn-primary bg-[#F4E869] text-black">Logout
                                     </button>
 
-                                   
-                                    
+
+
+
+
 
                                 </div>
+
                             </div>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  bg-[#F4E869] pb-[100px] z-20">
                                 <li>
@@ -179,6 +190,7 @@ const Navbar = () => {
                                         onClick={logOut}
                                         className="btn btn-sm btn-primary bg-[#F4E869] text-black">Logout</button>
                                 </li>
+
 
 
                             </ul>
@@ -194,6 +206,8 @@ const Navbar = () => {
                                 </Link>
 
 
+
+
                             </div>
 
 
@@ -205,10 +219,23 @@ const Navbar = () => {
 
 
 
+
                 </div>
 
 
+
             </div>
+            <div className="flex justify-end">
+                <button
+                    className="border-2 border-rose-700 mb-[10px] btn btn-sm flex "
+                    style={{ background: isDarkMode ? "black" : "white", color: isDarkMode ? "white" : "black" }}
+                    onClick={toggleTheme}
+
+                >
+                    {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+                </button>
+            </div>
+
 
         </div>
     );
