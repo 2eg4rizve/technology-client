@@ -84,13 +84,13 @@ const AddProduct = () => {
 
 
 
-
+                     {/* Photo */}
                     <div className="form-control w-full mb-4">
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered w-full" />
+                            <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered w-full" required/>
                         </label>
                     </div>
 
@@ -100,7 +100,7 @@ const AddProduct = () => {
                             <span className="label-text">Product Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='productName' placeholder="Product Name" className="input input-bordered w-full" />
+                            <input type="text" name='productName' placeholder="Product Name" className="input input-bordered w-full" required />
                         </label>
                     </div>
 
@@ -110,7 +110,7 @@ const AddProduct = () => {
                             <span className="label-text">Band Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='bandName' placeholder="Band Name" className="input input-bordered w-full" />
+                            <input type="text" name='bandName' placeholder="Band Name" className="input input-bordered w-full" required />
                         </label>
                     </div>
 
@@ -121,7 +121,7 @@ const AddProduct = () => {
                             <span className="label-text">Type</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='type' placeholder="Type" className="input input-bordered w-full" />
+                            <input type="text" name='type' placeholder="Type" className="input input-bordered w-full" required />
                         </label>
                     </div>
 
@@ -132,7 +132,7 @@ const AddProduct = () => {
                             <span className="label-text">Price</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='price' placeholder="Type" className="input input-bordered w-full" />
+                            <input type="text" name='price' placeholder="Type" className="input input-bordered w-full" required />
                         </label>
                     </div>
 
@@ -142,7 +142,7 @@ const AddProduct = () => {
                             <span className="label-text">Short description </span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='shortDescription' placeholder="Short description " className="input input-bordered w-full" />
+                            <input type="text" name='shortDescription' placeholder="Short description " className="input input-bordered w-full" required />
                         </label>
                     </div>
 
@@ -153,7 +153,7 @@ const AddProduct = () => {
                             <span className="label-text">Rating </span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='rating' placeholder="Rating" className="input input-bordered w-full" />
+                            <input  type="number" step="0.1"  min="0"  max="5" name='rating' placeholder="Rating" className="input input-bordered w-full" required/>
                         </label>
                     </div>
 
@@ -175,3 +175,16 @@ const AddProduct = () => {
 };
 
 export default AddProduct;
+
+
+
+
+//   {/* Rating */}
+//   <div className="form-control w-full mb-4">
+//   <label className="label">
+//       <span className="label-text">Rating </span>
+//   </label>
+//   <label className="input-group">
+//       <input type="text" name='rating' placeholder="Rating" className="input input-bordered w-full" />
+//   </label>
+// </div>

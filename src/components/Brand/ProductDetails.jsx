@@ -80,7 +80,7 @@ const ProductDetails = () => {
             <p className="mt-[10px] font-bold text-[20px] ml-[15px]">Band Name : {nowProduct[0]?.bandName}</p>
             <p className="mt-[10px] font-bold text-[20px] ml-[15px]">Type : {nowProduct[0]?.type}</p>
             <p className="mt-[10px] font-bold text-[20px] ml-[15px]">Price : {nowProduct[0]?.price} $</p>
-            <p className="mt-[10px] font-bold text-[20px] ml-[15px]">Description : {nowProduct[0]?.shortDescription}</p>
+            <p className="mt-[10px] font-bold text-[20px] ml-[15px] w-full">Description : {nowProduct[0]?.shortDescription}</p>
             <p className="mt-[10px] font-bold text-[20px] ml-[15px]">Rating : {nowProduct[0]?.rating} </p>
 
 

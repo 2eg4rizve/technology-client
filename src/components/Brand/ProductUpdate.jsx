@@ -1,13 +1,16 @@
 /* eslint-disable no-unused-vars */
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const ProductUpdate = () => {
 
     const { id } = useParams();
     // console.log("ProductUpdate id : ", id);
+
+    const { user } = useContext(AuthContext);
 
     const allBrands = useLoaderData();
 
@@ -29,8 +32,8 @@ const ProductUpdate = () => {
 
         const form = event.target;
 
-        const UserName = form.UserName.value;
-        const userEmail = form.userEmail.value;
+        const UserName = form?.UserName?.value;
+        const userEmail = form?.userEmail?.value;
         const photo = form.photo.value;
         const productName = form.productName.value;
         const bandName = form.bandName.value;
@@ -87,8 +90,7 @@ const ProductUpdate = () => {
                             <span className="label-text">User Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='UserName' value={nowProduct[0]?.UserName}
-                                placeholder="User Name" className="input input-bordered w-full" />
+                            <input type="text" name='UserName' value={user?.displayName} placeholder="User Name" className="input input-bordered w-full" />
                         </label>
                     </div>
 
@@ -98,7 +100,7 @@ const ProductUpdate = () => {
                             <span className="label-text">User Email</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='userEmail' value={nowProduct[0]?.userEmail} placeholder="User Name" className="input input-bordered w-full" />
+                            <input type="text" name='userEmail' value={user?.email} placeholder="User Name" className="input input-bordered w-full" />
                         </label>
                     </div>
 
@@ -173,7 +175,7 @@ const ProductUpdate = () => {
                             <span className="label-text">Rating </span>
                         </label>
                         <label className="input-group">
-                            <input type="number" name='rating' defaultValue={nowProduct[0]?.rating} placeholder="Rating" className="input input-bordered w-full" />
+                            <input type="number" step="0.1"  min="0"  max="5" name='rating' defaultValue={nowProduct[0]?.rating} placeholder="Rating" className="input input-bordered w-full" />
                         </label>
                     </div>
 
