@@ -62,7 +62,7 @@ const AddProduct = () => {
         <div>
             <p className="text-5xl font-bold text-center my-[20px] pt-[20px]">Add Product</p>
 
-            <div className="bg-[#EEEEEE] p-10">
+            <div className="bg-[#EEEEEE] p-10 text-black">
 
 
                 <form onSubmit={handleAdd}>

@@ -23,6 +23,7 @@ import Speciality from './pages/Speciality/Speciality';
 import Blog from './pages/Blog/Blog';
 import ContactUs from './pages/ContactUs/ContactUs';
 import PivateRoute from './components/PivateRoute/PivateRoute';
+import MyProduct from './pages/MyProduct/MyProduct';
 
 const router = createBrowserRouter([
   {
@@ -83,6 +84,12 @@ const router = createBrowserRouter([
         path:"/myCarts",
         element: <PivateRoute><MyCart></MyCart></PivateRoute> ,
         loader: () => fetch("https://technology-server-7itb96szo-2eg4rizve.vercel.app/carts")
+
+      },
+      {
+        path:"/myProducts",
+        element: <PivateRoute><MyProduct></MyProduct></PivateRoute> ,
+        loader: () => fetch("https://technology-server-7itb96szo-2eg4rizve.vercel.app/products")
 
       },
       {
