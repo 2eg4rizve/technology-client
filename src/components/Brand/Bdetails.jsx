@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { ScrollRestoration, useParams } from "react-router-dom";
 import BdetailsCard from "./BdetailsCard";
 
 
@@ -17,11 +17,12 @@ const Bdetails = () => {
 
     // console.log("B all : ",allBrands);
 
-    let img1 = "https://i.ibb.co/Twtfb1S/photo-1588702547923-7093a6c3ba33-crop-faces-edges-cs-tinysrgb-fit-crop-fm-jpg-ixid-M3wx-Mj-A3f-DB8-M.jpg"
-
-    let img2 = "https://i.ibb.co/1L9SYWd/photo-1498050108023-c5249f4df085-crop-faces-edges-cs-tinysrgb-fit-crop-fm-jpg-ixid-M3wx-Mj-A3f-DB8-M.jpg"
-
+    let img1;
+    let img2;
     let img3;
+    let img4;
+    let img5;
+    let img6;
 
     let bName = "";
     if (id == 1) {
@@ -32,6 +33,10 @@ const Bdetails = () => {
 
         img3 = "https://i.ibb.co/h27knrV/photo-1531554694128-c4c6665f59c2-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
 
+        img4 = "https://i.ibb.co/yP44Zgw/iphone-11-pro-max-silver-smartphone.jpg"
+        img5 = "https://i.ibb.co/kXCBVXw/macbook-air-m2-chip-midnight-01-500x500.webp"
+        img6 = "https://i.ibb.co/hCWMDhW/01-mai-2020-rostov-russie-black-applewatch-et-airpods-blancs-avec-bo-te-sur-fond-jaune-vif.jpg"
+
 
     }
     else if (id == 2) {
@@ -40,25 +45,37 @@ const Bdetails = () => {
         img2 = "https://i.ibb.co/HnS9dPM/photo-1589561084283-930aa7b1ce50-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
         img3 = "https://i.ibb.co/4gkW1jK/photo-1565375706404-082d37dd1f5d-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
 
+        img4 = "https://i.ibb.co/nfmxkX9/15s-fq2597tu-01-500x500.jpg"
+        img5 = "https://i.ibb.co/mcVYhnL/hp-15s-spruce-blue-02-500x500.jpg"
+        img6 = "https://i.ibb.co/R2TBn4B/135w-05-500x500.jpg"
+
     }
     else if (id == 3) {
         bName = "Samsung";
         img1 = "https://i.ibb.co/KWjMTYG/photo-1610945415295-d9bbf067e59c-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
         img2 = "https://i.ibb.co/GHw5hwq/photo-1597762470488-3877b1f538c6-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
         img3 = "https://i.ibb.co/TDfRqZ6/photo-1522202195465-df8a5f26fa15-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
-
+        img4 = "https://i.ibb.co/5Rmmr9d/galaxy-a03s-001-500x500.webp"
+        img5 = "https://i.ibb.co/Kx6QGtn/c24f390fhw-02-500x500.jpg"
+        img6 = "https://i.ibb.co/kB8SX1K/lf22t350fhnxza-500x500.jpg"
     }
     else if (id == 4) {
         bName = "Sony";
         img1 = "https://i.ibb.co/ZWJF9hH/photo-1617468264204-92588bd6485a-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
         img2 = "https://i.ibb.co/j4wCHbn/photo-1617468264185-e6535390e9a4-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
         img3 = "https://i.ibb.co/WHKS1mm/photo-1577174881658-0f30ed549adc-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
+        img4 = "https://i.ibb.co/wNcDWt2/bravia-kd-32w830k-01-500x500.webp"
+        img5 = "https://i.ibb.co/YhYqD5k/alpha-a6400-1-500x500.jpg"
+        img6 = "https://i.ibb.co/d62C9TK/bravia-kd-85x90k-01-500x500.webp"
     }
     else if (id == 5) {
         bName = "Google";
         img1 = "https://i.ibb.co/6NnZygS/photo-1525004351186-bdc426f3efaa-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
         img2 = "https://i.ibb.co/qdSL4GL/photo-1636373873339-721de2167b29-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
         img3 = "https://i.ibb.co/mtttLXR/photo-1630855796530-b5d8c7737863-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
+        img4 = "https://i.ibb.co/y0NCYFN/pixel-7-obsidian-500x500.webp"
+        img5 = "https://i.ibb.co/1GSfJdh/h2c-nest-mini-001-500x500.jpg"
+        img6 = "https://i.ibb.co/Q697hBy/pixel-fold-porcelain-500x500.webp"
 
     }
     else if (id == 6) {
@@ -100,6 +117,8 @@ const Bdetails = () => {
 
     if (myBrand?.length === 0) {
         return <div>
+            <ScrollRestoration />
+
             <p className="text-center text-5xl font-bold my-[50px]">{bName} </p>
 
             <p className="text-center text-4xl font-bold my-[50px]">No Product Found </p>
@@ -107,14 +126,15 @@ const Bdetails = () => {
 
             <p className="text-center text-4xl font-bold my-[50px]">Sorry , There Are No Product </p>
 
-           
-           
+
+
 
         </div>
     }
     else {
         return (
             <div>
+                <ScrollRestoration />
 
                 <p className="text-center text-5xl font-bold my-[50px]">{bName} </p>
 
@@ -142,9 +162,12 @@ const Bdetails = () => {
 
                 >
 
-                    <SwiperSlide><img className='h-[600px] w-full' src={img1} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='h-[600px] w-full' src={img2} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='h-[600px] w-full' src={img3} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-[600px] w-full  object-contain' src={img1} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-[600px] w-full  object-contain' src={img2} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-[600px] w-full  object-contain' src={img3} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-[600px] w-full  object-contain' src={img4} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-[600px] w-full  object-contain' src={img5} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-[600px] w-full  object-contain' src={img6} alt="" /></SwiperSlide>
 
 
 

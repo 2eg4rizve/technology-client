@@ -52,7 +52,7 @@ const MyCartsCard = ({ myCart, myCarts, setMyCarts }) => {
         <div>
             <div className="flex flex-col shadow-lg p-[20px] mt-[50px] border-2">
                 <div className="">
-                    <figure><img className="h-[250px] w-full" src={myPhoto} alt="Movie" /></figure>
+                    <figure><img className="h-[500px] w-full  object-contain" src={myPhoto} alt="Movie" /></figure>
                 </div>
 
                 <div className="mt-[30px]">

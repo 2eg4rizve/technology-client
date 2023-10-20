@@ -75,7 +75,7 @@ const ProductDetails = () => {
     return (
         <div>
             {/* <p>{id}</p> */}
-            <img className="w-full h-[300px]" src={nowProduct[0]?.photo} alt="" />
+            <img className="w-full max-h-[500px]  object-contain" src={nowProduct[0]?.photo} alt="" />
             <p className="mt-[50px] font-bold text-[20px] ml-[15px]" >Product Name : {nowProduct[0]?.productName}</p>
             <p className="mt-[10px] font-bold text-[20px] ml-[15px]">Band Name : {nowProduct[0]?.bandName}</p>
             <p className="mt-[10px] font-bold text-[20px] ml-[15px]">Type : {nowProduct[0]?.type}</p>
