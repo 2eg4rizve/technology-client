@@ -9,6 +9,7 @@ import { ScrollRestoration } from "react-router-dom";
 
 const Login = () => {
 
+    const { isDarkMode, setIsDarkMode } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const { signIn } = useContext(AuthContext);
@@ -55,7 +56,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="text-black">
 
             <ScrollRestoration />
 
@@ -76,7 +77,7 @@ const Login = () => {
                                 <input type="text" placeholder="email" className="input input-bordered" name="email" />
                             </div>
 
-                            <div className="form-control">
+                            <div className="form-control" >
 
                                 <label className="label">
                                     <span className="label-text">Password</span>
