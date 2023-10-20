@@ -71,18 +71,18 @@ const router = createBrowserRouter([
       {
         path: "/productDetail/:id",
         element: <PivateRoute><ProductDetails></ProductDetails></PivateRoute> ,
-        loader: () => fetch("https://technology-server-koh3hphxd-2eg4rizve.vercel.app/products")
+        loader: () => fetch("https://technology-server-7itb96szo-2eg4rizve.vercel.app/products")
       },
       {
         path: "productUpdate/:id",
         element: <PivateRoute><ProductUpdate></ProductUpdate></PivateRoute> ,
-        loader: () => fetch("https://technology-server-koh3hphxd-2eg4rizve.vercel.app/products")
+        loader: () => fetch("https://technology-server-7itb96szo-2eg4rizve.vercel.app/products")
 
       },
       {
         path:"/myCarts",
         element: <PivateRoute><MyCart></MyCart></PivateRoute> ,
-        loader: () => fetch("https://technology-server-koh3hphxd-2eg4rizve.vercel.app/carts")
+        loader: () => fetch("https://technology-server-7itb96szo-2eg4rizve.vercel.app/carts")
 
       },
       {
@@ -106,4 +106,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>,
 )
 
-//    loader: ({params}) => fetch(`https://technology-server-koh3hphxd-2eg4rizve.vercel.app/products/${params.id}`)
+//    loader: ({params}) => fetch(`https://technology-server-7itb96szo-2eg4rizve.vercel.app/products/${params.id}`)

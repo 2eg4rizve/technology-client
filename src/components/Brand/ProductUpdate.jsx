@@ -53,7 +53,7 @@ const ProductUpdate = () => {
 
         console.log(newProduct);
 
-        fetch(`https://technology-server-koh3hphxd-2eg4rizve.vercel.app/products/${id}`, {
+        fetch(`https://technology-server-7itb96szo-2eg4rizve.vercel.app/products/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

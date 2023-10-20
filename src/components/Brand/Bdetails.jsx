@@ -78,7 +78,7 @@ const Bdetails = () => {
     const [allBrands, setAllBrands] = useState();
 
     useEffect(() => {
-        fetch('https://technology-server-koh3hphxd-2eg4rizve.vercel.app/products')
+        fetch('https://technology-server-7itb96szo-2eg4rizve.vercel.app/products')
             .then(res => res.json())
             .then(data => setAllBrands(data))
     }, [id])

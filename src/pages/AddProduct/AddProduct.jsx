@@ -38,7 +38,7 @@ const AddProduct = () => {
 
 
 
-        fetch('https://technology-server-koh3hphxd-2eg4rizve.vercel.app/products', {
+        fetch('https://technology-server-7itb96szo-2eg4rizve.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
