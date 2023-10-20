@@ -48,7 +48,7 @@ const ProductDetails = () => {
         console.log(newProduct);
 
 
-        fetch('http://localhost:5000/carts', {
+        fetch('https://technology-server-koh3hphxd-2eg4rizve.vercel.app/carts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
