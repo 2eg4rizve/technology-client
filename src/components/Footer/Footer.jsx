@@ -32,10 +32,10 @@ const Footer = () => {
                     <header className="footer-title">Newsletter</header>
                     <fieldset className="form-control w-80">
                         <label className="label">
-                            <span className="label-text text-neutral-content">Enter your email address</span>
+                            <span  className="label-text text-neutral-content">Enter your email address</span>
                         </label>
-                        <div className="relative">
-                            <input type="text"  placeholder="Enter Email" className="input input-bordered w-full pr-16 text-black" />
+                        <div className="relative" >
+                            <input type="text"  placeholder="Enter Email" className="input input-bordered w-full pr-16 text-black"  style={{ background: isDarkMode ? "#2C3333" : "white" , color: isDarkMode ? "white" : "black"} } />
                             <button className="btn btn-primary absolute top-0 right-0 rounded-l-none bg-[#78C1F3] text-black">Subscribe</button>
                         </div>
                     </fieldset>

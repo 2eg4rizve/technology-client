@@ -60,14 +60,14 @@ const ContactUs = () => {
                     </div>
 
                 </div>
-                <div className="flex-1 text-black">
+                <div className="flex-1 text-black" >
 
                     <div className="mt-[100px] space-y-3">
-                        <input type="text" placeholder="Enter Your Name" className="input input-bordered w-full max-w-xs  border-2" />
+                        <input type="text" placeholder="Enter Your Name" className="input input-bordered w-full max-w-xs  border-2" style={{ background: isDarkMode ? "#2C3333" : "white" , color: isDarkMode ? "white" : "black"} }/>
                         <br />
-                        <input type="text" placeholder="Enter Your Email" className="input input-bordered w-full max-w-xs  border-2" />
+                        <input type="text" placeholder="Enter Your Email" className="input input-bordered w-full max-w-xs  border-2"  style={{ background: isDarkMode ? "#2C3333" : "white" , color: isDarkMode ? "white" : "black"} } />
 
-                        <textarea className="textarea border-2 w-full min-h-[200px]  input-bordered " placeholder="Type Your Message"></textarea>
+                        <textarea  style={{ background: isDarkMode ? "#2C3333" : "white" , color: isDarkMode ? "white" : "black"} } className="textarea border-2 w-full min-h-[200px]  input-bordered " placeholder="Type Your Message"></textarea>
 
                         <button className="btn btn-primary w-full">Submit</button>
 

@@ -19,7 +19,7 @@ const Brand = () => {
 
 
     return (
-        <div className="pb-[50px]" style={{ background: isDarkMode ? "#6B728E" : "white" , color: isDarkMode ? "white" : "black" } }>
+        <div className="pb-[50px]" style={{ background: isDarkMode ? "#232D3F" : "white" , color: isDarkMode ? "white" : "black" } }>
             <ScrollRestoration />
 
             <p className="text-5xl font-bold text-center my-[40px] py-[40px]">BRAND</p>
