@@ -13,7 +13,7 @@ const BdetailsCard = ({ product }) => {
     return (
         <div>
 
-            <div className="card card-compact bg-base-100 shadow-xl">
+            <div className="card card-compact bg-base-100 shadow-xl text-black">
                 <figure><img className="h-[300px] w-full  object-contain" src={photo} alt="Shoes" /></figure>
                 <div className="card-body h-[380px] mt-[20px] ">
                     <h2 className="card-title">Product Name : {productName}</h2>

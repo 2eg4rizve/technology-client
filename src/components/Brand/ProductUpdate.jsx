@@ -84,7 +84,7 @@ const ProductUpdate = () => {
             <p className="text-5xl font-bold text-center my-[20px] pt-[20px]">Update Product : </p>
 
 
-            <div className="bg-[#f4F3F0] p-10">
+            <div className="bg-[#f4F3F0] p-10 text-black">
 
 
                 <form onSubmit={handleUpdate}>
