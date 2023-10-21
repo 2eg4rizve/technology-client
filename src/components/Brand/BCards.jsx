@@ -14,7 +14,7 @@ const BCards = ({ brand }) => {
         <div>
 
             <div className="card card-compact bg-base-100 shadow-xl mt-[30px]">
-                <figure><img className="h-[200px] w-full" src={imagelogo} alt="Shoes" /></figure>
+                <figure><img className="h-[200px] w-full object-contain" src={imagelogo} alt="Shoes" /></figure>
                 <div className="card-body" style={{ background: isDarkMode ? "#B2B2B2" : "white" , color: isDarkMode ? "white" : "black" }}>
                     {/* <h2 className="card-title">id: {id}</h2> */}
 

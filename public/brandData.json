@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Apple",
-    "imagelogo" : "https://i.ibb.co/9nbTXDq/photo-1621768216002-5ac171876625-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
+    "imagelogo" : "https://i.ibb.co/JpwtkZV/image.png"
   },
   {
     "id": 2,
@@ -12,25 +12,25 @@
   {
     "id": 3,
     "name": "Samsung",
-    "imagelogo":"https://i.ibb.co/hM885Nv/photo-1662947995689-ec5165848ad0-auto-format-fit-max-q-80-crop-faces-edges-cs-tinysrgb-fm-jpg-ixid-M.jpg"
+    "imagelogo":"https://i.ibb.co/5Kj9msD/image.png"
 
   },
   {
     "id": 4,
     "name": "Sony",
-    "imagelogo":"https://i.ibb.co/gtqXtBd/images-q-tbn-ANd9-Gc-Rnsr-GGil0-VEGLGj-V5z7tt-U6-Fr-Nr-H5b-E75yjg-usqp-CAU.png"
+    "imagelogo":"https://i.ibb.co/FB0tW8d/image.png"
 
   },
   {
     "id": 5,
     "name": "Google",
-    "imagelogo":"https://i.ibb.co/f1wkF4M/photo-1572059002053-8cc5ad2f4a38-auto-format-fit-max-q-80-blend-000000-blend-alpha-10-blend-mode-nor.jpg"
+    "imagelogo":"https://i.ibb.co/yNbkjtp/image.png"
 
   },
   {
     "id": 6,
     "name": "Intel",
-    "imagelogo":"https://i.ibb.co/m6mngLj/Intel-Logo.png"
+    "imagelogo":"https://i.ibb.co/JvWJrgT/image.png"
 
   }
 ]
