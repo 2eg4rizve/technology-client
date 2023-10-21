@@ -236,7 +236,7 @@ const Navbar = () => {
 
 
             </div>
-            <div className="flex justify-end">
+            {/* <div className="flex justify-end">
                 <button
                     className="border-2 border-rose-700 mb-[10px] btn btn-sm flex "
                     style={{ background: isDarkMode ? "black" : "white", color: isDarkMode ? "white" : "black" }}
@@ -245,6 +245,20 @@ const Navbar = () => {
                 >
                     {isDarkMode ? 'Light Mode' : 'Dark Mode'}
                 </button>
+            </div> */}
+
+            <div className="flex justify-end">
+                <p>Light Mode</p>
+                <label className="toggle-switch mx-[5px]">
+                    <input
+                        type="checkbox"
+                        className="toggle"
+                        onChange={toggleTheme}
+                       
+                    />
+                    <span className="slider round"></span>
+                </label>
+                <p>Dark Mode</p>
             </div>
 
 
