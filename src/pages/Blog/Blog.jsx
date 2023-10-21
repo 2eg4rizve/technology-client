@@ -82,7 +82,7 @@ const Blog = () => {
                 </div>
 
 
-                <div className="mt-[100px] space-y-3">
+                <div className="mt-[100px] space-y-3 text-black">
                     <input type="text" placeholder="Enter Your Name" className="input input-bordered w-full max-w-xs border-[#78C1F3] border-2" />
                     <br />
                     <input type="text" placeholder="Enter Your Email" className="input input-bordered w-full max-w-xs border-[#78C1F3] border-2" />
