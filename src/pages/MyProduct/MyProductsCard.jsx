@@ -16,7 +16,7 @@ const MyProductsCard = ({ myProduct }) => {
                     <h2 className="card-title">Brand : {bandName}</h2>
                     <h2 className="card-title">Type : {type}</h2>
                     <h2 className="card-title">Price : {price} $</h2>
-                    <h2 className="card-title">Description : {shortDescription} $</h2>
+                    <h2 className="card-title">Description : {shortDescription} </h2>
                     
                     <h2 className="card-title pb-[20px]">Rating : {rating} / 5</h2>
 
